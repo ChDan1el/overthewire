@@ -15,11 +15,11 @@ Quando começamos uma questão de web hacking, o primeiro procedimento é verifi
 
 [![Captura-de-tela-2025-11-05-105804.png](https://i.postimg.cc/VLJ5rnh4/Captura-de-tela-2025-11-05-105804.png)](https://postimg.cc/56MfDYbF)
 
-**FLAG:** 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+**FLAG:** scfWG6qNEIdzqVyfRwEGXyNUfFZkZeQ7
 
 ## [natas1](http://natas1.natas.labs.overthewire.org)
 ###### Usuário: natas1
-###### Senha: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+###### Senha: scfWG6qNEIdzqVyfRwEGXyNUfFZkZeQ7
 
 Essa questão é semelhante ao natas0
 
@@ -31,11 +31,11 @@ Então uso o atalho de teclado **Ctrl + U** para inspecionar o código da págin
 
 [![Captura-de-tela-2025-11-05-110249.png](https://i.postimg.cc/1tKMqL8Z/Captura-de-tela-2025-11-05-110249.png)](https://postimg.cc/BLXxW75h)
 
-**FLAG:** TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
+**FLAG:** vsDOxoXyq3wckCP1ZmTZ71ngIA606odB
 
 ## [natas2](http://natas2.natas.labs.overthewire.org)
 ###### Usuário: natas2
-###### Senha: TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
+###### Senha: vsDOxoXyq3wckCP1ZmTZ71ngIA606odB
 
 Ao pressionar **Ctrl + U** na página, sou levado ao código-fonte HTML
 
@@ -53,11 +53,11 @@ Clicando no users.txt encontro a *flag*
 
 [![Captura-de-tela-2025-11-05-111727.png](https://i.postimg.cc/W3Ps5fsv/Captura-de-tela-2025-11-05-111727.png)](https://postimg.cc/XZQMJLZH)
 
-**FLAG:** 3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
+**FLAG:** K30JrSRHzjxq3paUQuwozY4MNvmNFyhI
 
 ## [natas3](http://natas3.natas.labs.overthewire.org)
 ###### Usuário: natas3
-###### Senha: 3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
+###### Senha: K30JrSRHzjxq3paUQuwozY4MNvmNFyhI
 
 O primeiro passo foi inspecionar o código da página, onde encontrei uma dica
 
@@ -75,11 +75,11 @@ Aqui encontro um link para usuários e, por fim, encontro a *flag*
 
 <img width="609" height="100" alt="image" src="https://github.com/user-attachments/assets/de5da0fc-2714-4ee0-b333-b8b51bc40264" />
 
-**FLAG:** QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+**FLAG:** JDrPnuZAKyl6MkiqQGFIddrqpvgOASth
 
 ## [natas4](http://natas4.natas.labs.overthewire.org)
 ###### Usuário: natas4
-###### Senha: QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+###### Senha: JDrPnuZAKyl6MkiqQGFIddrqpvgOASth
 
 De cara, já encontro uma mensagem informando que não tenho acesso à página, sendo permitido o acesso apenas com a URL de natas5. Após recarregar a página, confirmo a mensagem, pois estou utilizando a URL de natas4
 
