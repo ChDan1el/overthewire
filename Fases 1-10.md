@@ -103,11 +103,11 @@ Ao ganhar acesso à página, consigo a *flag*.
 
 <img width="923" height="273" alt="image" src="https://github.com/user-attachments/assets/df8b47c3-7a26-46e9-bc64-0fd724e9c9d9" />
 
-**FLAG:** 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+**FLAG:** e4z2Noy3oqwPJUWzJH0dseN67Cn1sy2M
 
 ## [natas5](http://natas5.natas.labs.overthewire.org)
 ###### Usuário: natas5
-###### Senha: 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+###### Senha: e4z2Noy3oqwPJUWzJH0dseN67Cn1sy2M
 
 Acesso negado, pois não estou *autenticado*. Isso dá uma dica sobre os [cookies](https://www.kaspersky.com.br/resource-center/definitions/cookies) do site
 
@@ -122,11 +122,11 @@ Então, altero o valor para 1, recarrego a página e, em seguida, a *flag* é ex
 
 [![Captura-de-tela-2025-11-12-125652.png](https://i.postimg.cc/sXzfNT5h/Captura-de-tela-2025-11-12-125652.png)](https://postimg.cc/R3Pz3QsS)
 
-**FLAG:** 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
+**FLAG:** 7mhjtShJAcld2NYbKHEadnhEwRn2P8VT
 
 ## [natas6](http://natas6.natas.labs.overthewire.org)
 ###### Usuário: natas6
-###### Senha: 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
+###### Senha: 7mhjtShJAcld2NYbKHEadnhEwRn2P8VT
 
 Logo na primeira página da fase, o código do login já está disponível, então abro para analisá-lo
 
@@ -146,12 +146,12 @@ Após inserir a senha no input secret, consigo a *flag*
 
 <img width="623" height="248" alt="Captura de tela 2025-11-18 151501" src="https://github.com/user-attachments/assets/e33eafee-3e4e-40a7-8382-28976428c694" />
 
-**FLAG:** bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
+**FLAG:** B1szg95UcTnrzwnF3i3TzYHlyYh8iBV0 
 
 
 ## [natas7](http://natas7.natas.labs.overthewire.org)
 ###### Usuário: natas7
-###### Senha: bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
+###### Senha: B1szg95UcTnrzwnF3i3TzYHlyYh8iBV0 
 
 Na página inicial há apenas dois botões, *home* e *about*. Ao acessá-los, noto um padrão na URL: ela sempre utiliza o formato
 
@@ -171,11 +171,11 @@ Como a URL carrega páginas com base no parâmetro informado, substituo o nome d
 
 E aqui já está a *flag*
 
-**FLAG:** xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
+**FLAG:** ugXL95KQmUAJJj6bMezOlBNDyI9Imwkc 
 
 ## [natas8](http://natas8.natas.labs.overthewire.org)
 ###### Usuário: natas8
-###### Senha: xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
+###### Senha: ugXL95KQmUAJJj6bMezOlBNDyI9Imwkc 
 
 Assim que acesso a página inicial, já tenho a opção de visualizar o código por trás do desafio
 
@@ -209,11 +209,11 @@ Então agora é só colocar essa senha na pagina inicial e ganhar a *flag*
 
 <img width="1297" height="385" alt="image" src="https://github.com/user-attachments/assets/18b2ea82-b4da-4004-96c4-2d2afbe287f5" />
 
-**FLAG:** ZE1ck82lmdGIoErlhQgWND6j2Wzz6b6t
+**FLAG:** UdxmI27dTaXmnd1rxKQTfws6jihTdcQ9
 
 ## [natas9](http://natas9.natas.labs.overthewire.org)
 ###### Usuário: natas9
-###### Senha: ZE1ck82lmdGIoErlhQgWND6j2Wzz6b6t
+###### Senha: UdxmI27dTaXmnd1rxKQTfws6jihTdcQ9
 
 A função da página inicial basicamente retorna uma palavra semelhante à string que você digita
 
@@ -245,11 +245,11 @@ Como o diretório realmente existe, sigo para ler seu conteúdo utilizando o com
 
 E aí já está a *flag*
 
-**FLAG:** t7I5VHvpa14sJTUGV0cbEsbYfFP2dmOu
+**FLAG:** EgjlkzB6E8LJyf2Obt4q7q4ewt5ZWSNv
 
 ## [natas10](http://natas10.natas.labs.overthewire.org)
 ###### Usuário: natas10
-###### Senha: t7I5VHvpa14sJTUGV0cbEsbYfFP2dmOu
+###### Senha: EgjlkzB6E8LJyf2Obt4q7q4ewt5ZWSNv
 
 O desafio 10 é basicamente o natas9, mas com filtro no *input*. 
 
@@ -271,11 +271,11 @@ $ cat /etc/natas_webpass/natas11
 
 E aqui já está a *flag*
 
-**FLAG:** UJdqkK1pTu6VLt9UHWAgRZz6sVUZ3lEk
+**FLAG:** VUMQDmuITOEHzhviLE5V0VG9cPMQkyxd
 
 ## [natas11](http://natas11.natas.labs.overthewire.org)
 ###### Usuário: natas11
-###### Senha: UJdqkK1pTu6VLt9UHWAgRZz6sVUZ3lEk
+###### Senha: VUMQDmuITOEHzhviLE5V0VG9cPMQkyxd
 
 Após acessar a página já tenho algumas informções, os cookies do site estão encriptados em XOR
 e o input faz o fundo mudar de cor de acordo com o código
