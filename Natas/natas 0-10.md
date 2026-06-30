@@ -1,41 +1,37 @@
-# OverTheWire
-
-[OverTheWire](https://overthewire.org/wargames/) é uma plataforma de wargames criada para ensinar segurança ofensiva e defensiva por meio de desafios práticos. Cada jogo é dividido em níveis, e cada nível funciona como um pequeno laboratório onde o objetivo é encontrar uma flag (geralmente uma senha) para avançar ao próximo estágio.
-
-# Natas 
-
-[Natas](https://overthewire.org/wargames/natas/) é um dos wargames mais conhecidos do OverTheWire, focado exclusivamente em segurança web.
-Cada nível apresenta uma página vulnerável hospedada em um servidor real. O objetivo é analisar essa página e identificar a falha que permite revelar a password do próximo nível.
-
 ## [natas0](http://natas0.natas.labs.overthewire.org)
 ###### Usuário: natas0
 ###### Senha: natas0
 
-Quando começamos uma questão de web hacking, o primeiro procedimento é verificar o HTML do site. E aqui já está a *flag*
+Ao entrar no desafio nos deparamos com essa dica:
 
-[![Captura-de-tela-2025-11-05-105804.png](https://i.postimg.cc/VLJ5rnh4/Captura-de-tela-2025-11-05-105804.png)](https://postimg.cc/56MfDYbF)
+<img width="623" height="157" alt="image" src="https://github.com/user-attachments/assets/9d4d364c-21ac-4223-841c-0a47c4d0c82e" />
 
-**FLAG:** scfWG6qNEIdzqVyfRwEGXyNUfFZkZeQ7
+Então, usando o DevTools, ou seja, inspecionando o HTML da página, conseguimos a flag como um comentário HTML
+
+<img width="1397" height="645" alt="image" src="https://github.com/user-attachments/assets/5578c4a6-aa82-45b8-aa40-539fe1899ffb" />
+
+### **FLAG:** scfWG6qNEIdzqVyfRwEGXyNUfFZkZeQ7
 
 ## [natas1](http://natas1.natas.labs.overthewire.org)
 ###### Usuário: natas1
 ###### Senha: scfWG6qNEIdzqVyfRwEGXyNUfFZkZeQ7
 
-Essa questão é semelhante ao natas0
+Agora nesse desafio, não podemos inspecionar a página usando o botão direito do mouse
 
-Tentei inspecionar o código HTML clicando com o botão direito, mas o site não permitiu
+<img width="609" height="153" alt="image" src="https://github.com/user-attachments/assets/32f392ed-f508-4593-8bfc-62ed4eddec78" />
 
-[![Captura-de-tela-2025-11-05-110059.png](https://i.postimg.cc/Sxj5pNJQ/Captura-de-tela-2025-11-05-110059.png)](https://postimg.cc/qNVQsrsW)
+Então usaremos o atalho **Ctrl + U** para visualizar o código fonte da página. E lá já temos a flag
 
-Então uso o atalho de teclado **Ctrl + U** para inspecionar o código da página e assim encontro a *flag*
+<img width="1070" height="331" alt="image" src="https://github.com/user-attachments/assets/858a1448-d982-4339-8deb-1e205c6899e9" />
 
-[![Captura-de-tela-2025-11-05-110249.png](https://i.postimg.cc/1tKMqL8Z/Captura-de-tela-2025-11-05-110249.png)](https://postimg.cc/BLXxW75h)
-
-**FLAG:** vsDOxoXyq3wckCP1ZmTZ71ngIA606odB
+### **FLAG:** vsDOxoXyq3wckCP1ZmTZ71ngIA606odB
 
 ## [natas2](http://natas2.natas.labs.overthewire.org)
 ###### Usuário: natas2
 ###### Senha: vsDOxoXyq3wckCP1ZmTZ71ngIA606odB
+
+<img width="1073" height="272" alt="image" src="https://github.com/user-attachments/assets/3e15e53c-0fdc-4c1d-ae40-f6cf15053f4f" />
+
 
 Ao pressionar **Ctrl + U** na página, sou levado ao código-fonte HTML
 
