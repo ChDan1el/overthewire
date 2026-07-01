@@ -1,4 +1,4 @@
-<img width="687" height="119" alt="image" src="https://github.com/user-attachments/assets/c6c234f8-4131-451a-a783-d8b9fa6dfd90" />## [natas0](http://natas0.natas.labs.overthewire.org)
+## [natas0](http://natas0.natas.labs.overthewire.org)
 ###### Usuário: natas0
 ###### Senha: natas0
 
@@ -81,73 +81,70 @@ Acessando esse arquivos conseguimos a flag
 ###### Usuário: natas4
 ###### Senha: JDrPnuZAKyl6MkiqQGFIddrqpvgOASth
 
-De cara, já encontro uma mensagem informando que não tenho acesso à página, sendo permitido o acesso apenas com a URL de natas5. Após recarregar a página, confirmo a mensagem, pois estou utilizando a URL de natas4
+Ao entrar no desafio nos deparamos com essa exigência: "Os usuários só terão acesso à flag se vierem do natas5"
 
-<img width="956" height="365" alt="image" src="https://github.com/user-attachments/assets/450e744f-99a6-45db-a1de-dbf1f743a247" />
+<img width="586" height="158" alt="image" src="https://github.com/user-attachments/assets/6a1dc169-3157-4113-8f2f-8ea392489b8a" />
 
-Como o acesso à flag só é possível pela URL natas5, irei utilizar o [Burp Suite](https://pt.wikipedia.org/wiki/Burp_Suite) do Kali Linux para interceptar a [requisição HTTP](https://www.hostinger.com/br/tutoriais/servidor-proxy) e alterar a URL para natas5
+Então para contornar esse problema, usaremos o **Burp Suite**.
 
-Com o **Burp Suite** aberto, navego até a aba Proxy, inicio o browser integrado e insiro a URL de natas4. Em seguida, ativo a interceptação de requisições para capturar a requisição HTTP e poder modificá-la
+Nós vamos interceptar a [requisição HTTP](https://www.hostinger.com/br/tutoriais/servidor-proxy) do desafio para alterar a origem da requisição, fazendo o
+**Referer** mudar de "natas4" para "natas5"
 
-<img width="1621" height="592" alt="image" src="https://github.com/user-attachments/assets/f5e22b71-b2c4-4d09-a0d7-3f5fef2e9f9a" />
+Então vamos lá: Primeiro vamos abrir o **Burp Suite**, ir em **Proxy** e abrir o browser. Depois logamos no natas4
 
-Ao recarregar a página, o **Burp Suite** intercepta a requisição HTTP
+<img width="964" height="479" alt="image" src="https://github.com/user-attachments/assets/ab06ea80-d6d0-47e4-bb01-0e2a23f15d86" />
 
-<img width="1590" height="846" alt="image" src="https://github.com/user-attachments/assets/8de900c9-c7e2-4630-ab2a-7e2c7d60d553" />
+Agora vamos ligar o "Intercept Off" e recarregar a página para interceptar a requisição HTTP. Logo depois mudaremos o **Referer** de "**natas4.natas.labs.overthewire.org**" para "**natas5.natas.labs.overthewire.org**"
 
-Basta alterar o cabeçalho **Referer** para "http://natas5.natas.labs.overthewire.org/" e, em seguida, encaminhar a requisição ao proxy usando o botão laranja
+<img width="1026" height="724" alt="image" src="https://github.com/user-attachments/assets/c271635d-43c2-4feb-b995-0a074c5229bc" />
 
-<img width="1028" height="186" alt="image" src="https://github.com/user-attachments/assets/f0916438-0355-4383-b835-b11980e96481" />
+E para enviar a requisição para o servidor clicamos em "Foward", agora retornando ao desafio conseguiremos a flag
 
-Ao ganhar acesso à página, consigo a *flag*.
+<img width="962" height="449" alt="image" src="https://github.com/user-attachments/assets/e4a4a2f0-4276-4814-a734-156021396ade" />
 
-<img width="923" height="273" alt="image" src="https://github.com/user-attachments/assets/df8b47c3-7a26-46e9-bc64-0fd724e9c9d9" />
-
-**FLAG:** e4z2Noy3oqwPJUWzJH0dseN67Cn1sy2M
+### **FLAG:** e4z2Noy3oqwPJUWzJH0dseN67Cn1sy2M
 
 ## [natas5](http://natas5.natas.labs.overthewire.org)
 ###### Usuário: natas5
 ###### Senha: e4z2Noy3oqwPJUWzJH0dseN67Cn1sy2M
 
-Acesso negado, pois não estou *autenticado*. Isso dá uma dica sobre os [cookies](https://www.kaspersky.com.br/resource-center/definitions/cookies) do site
+Ao entrar no desafio temos essa mensagem: "Acesso negado. Você não está logado". Isso dá uma dica sobre os [cookies](https://www.kaspersky.com.br/resource-center/definitions/cookies) do site
 
-<img width="656" height="235" alt="image" src="https://github.com/user-attachments/assets/8d942baa-d3b1-45d3-9cce-c9b1d4a8e535" />
+<img width="475" height="105" alt="image" src="https://github.com/user-attachments/assets/ff5bd92b-47fb-4b49-ad5b-271e982ee533" />
 
-O valor de **loggedin** está definido como 0, o que normalmente indica negação.
+Ao acessar os cookies temos que o "loggedin" está com valor 0, oque em liguagem binária significa negação.
 
-<img width="1046" height="464" alt="image" src="https://github.com/user-attachments/assets/f75636ac-56c1-4f19-b5bd-d190f530a2fc" />
+<img width="945" height="179" alt="image" src="https://github.com/user-attachments/assets/4a71fbac-34b5-408a-a9e6-338e617efeb8" />
 
+Então mudaremos o valor de "loggedin" de 0 para 1, onde o 1 significa positivo. Fazendo isso já ganhamos a flag
 
-Então, altero o valor para 1, recarrego a página e, em seguida, a *flag* é exibida
+<img width="1027" height="473" alt="image" src="https://github.com/user-attachments/assets/5143ef0d-d0be-4115-8c84-2f92db53b8d7" />
 
-[![Captura-de-tela-2025-11-12-125652.png](https://i.postimg.cc/sXzfNT5h/Captura-de-tela-2025-11-12-125652.png)](https://postimg.cc/R3Pz3QsS)
-
-**FLAG:** 7mhjtShJAcld2NYbKHEadnhEwRn2P8VT
+### **FLAG:** 7mhjtShJAcld2NYbKHEadnhEwRn2P8VT
 
 ## [natas6](http://natas6.natas.labs.overthewire.org)
 ###### Usuário: natas6
 ###### Senha: 7mhjtShJAcld2NYbKHEadnhEwRn2P8VT
 
-Logo na primeira página da fase, o código do login já está disponível, então abro para analisá-lo
+Ao entrar no desafio já é nos disponibilizado visualizar o código da página. Onde teremos que achar uma chave para receber a flag
 
-<img width="621" height="205" alt="Captura de tela 2025-11-18 151244" src="https://github.com/user-attachments/assets/734e8cba-4d96-4ce4-9160-e13a06569d62" />
+<img width="556" height="145" alt="image" src="https://github.com/user-attachments/assets/01b9ef9c-b28c-40b8-af90-ec165a0889f3" />
 
-Ao analisar o código, percebo que ele importa dados de outro diretório, especificamente de includes/secret.inc
+Acessando "sourcecode" do desafio, temos um código php nele
 
-<img width="519" height="159" alt="image" src="https://github.com/user-attachments/assets/54869012-dcb6-4d4f-ac05-b93875ea06de" />
+<img width="519" height="191" alt="image" src="https://github.com/user-attachments/assets/6f2ad455-58b9-41ce-92d7-1a444e881758" />
 
-Em seguida, adiciono o caminho do diretório ao final da URL e, ao acessá-lo, obtenho a senha da página
+Onde a função "include" chama um outro arquivo presente no servidor para o código da página.
 
-<img width="445" height="33" alt="image" src="https://github.com/user-attachments/assets/7050c1ef-7632-43ca-8c84-f503d27cdd02" />
+Acessando o arquivo chamado, nós conseguimos a chave para o desafio
 
-<img width="313" height="78" alt="Captura de tela 2025-11-18 151436" src="https://github.com/user-attachments/assets/d1040b7d-d778-4e13-b9f0-d6044b80bf8e" />
+<img width="776" height="144" alt="image" src="https://github.com/user-attachments/assets/802ef4cc-5cf9-43cd-b17a-d917a7a19e14" />
 
-Após inserir a senha no input secret, consigo a *flag*
+Ao inserir a chave **FOEIUWGHFEEUHOFUOIU** no input, conseguimos a flag
 
-<img width="623" height="248" alt="Captura de tela 2025-11-18 151501" src="https://github.com/user-attachments/assets/e33eafee-3e4e-40a7-8382-28976428c694" />
+<img width="584" height="203" alt="image" src="https://github.com/user-attachments/assets/4e300005-6684-4ec8-829a-7f13bc0b3f49" />
 
-**FLAG:** B1szg95UcTnrzwnF3i3TzYHlyYh8iBV0 
-
+**FLAG:** B1szg95UcTnrzwnF3i3TzYHlyYh8iBV0
 
 ## [natas7](http://natas7.natas.labs.overthewire.org)
 ###### Usuário: natas7
