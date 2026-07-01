@@ -1,4 +1,4 @@
-## [natas0](http://natas0.natas.labs.overthewire.org)
+<img width="687" height="119" alt="image" src="https://github.com/user-attachments/assets/c6c234f8-4131-451a-a783-d8b9fa6dfd90" />## [natas0](http://natas0.natas.labs.overthewire.org)
 ###### Usuário: natas0
 ###### Senha: natas0
 
@@ -30,48 +30,52 @@ Então usaremos o atalho **Ctrl + U** para visualizar o código fonte da página
 ###### Usuário: natas2
 ###### Senha: vsDOxoXyq3wckCP1ZmTZ71ngIA606odB
 
+Analisando o código fonte da página, encontro a imagem "pixel.png" nela
+
 <img width="1073" height="272" alt="image" src="https://github.com/user-attachments/assets/3e15e53c-0fdc-4c1d-ae40-f6cf15053f4f" />
 
+Clicando no link da imagem, sou direcionado para a imagem, contendo somente a imagem de 1 pixel branco
 
-Ao pressionar **Ctrl + U** na página, sou levado ao código-fonte HTML
+<img width="76" height="76" alt="Captura de tela 2026-07-01 162744" src="https://github.com/user-attachments/assets/456b1c10-ae5a-46d3-be7d-e24a00b09c1c" />
 
-[![Captura-de-tela-2025-11-05-111133.png](https://i.postimg.cc/h45T5DW9/Captura-de-tela-2025-11-05-111133.png)](https://postimg.cc/rz5DdLpm)
+Mas oque importa é a sua URL, pois nele mostra que essa imagem está armazenada no diretório "/files"
 
-Há um novo arquivo indexado chamado "files/pixel.png", então verifico o que há nele
+<img width="509" height="36" alt="image" src="https://github.com/user-attachments/assets/50aecd2a-dcca-4a0c-ab0a-67af44a02a6f" />
 
-[![Captura-de-tela-2025-11-11-202317.png](https://i.postimg.cc/j2mghBrD/Captura-de-tela-2025-11-11-202317.png)](https://postimg.cc/BP5BSYb3)
+Então, acessando o diretório "/files", encontro dois arquivos: o primeiro sendo a imagem e o segundo sendo uma lista de usuários
 
-A página exibe apenas um único pixel, porém, ao observar a URL, percebo que o caminho passa pelo diretório /files. Diante disso, decido explorar o conteúdo desse diretório em busca de novas pistas da flag
+<img width="352" height="33" alt="image" src="https://github.com/user-attachments/assets/9194516d-2efb-44e1-b2a7-d74cd6dae3b2" />
 
-[![Captura-de-tela-2025-11-05-111630.png](https://i.postimg.cc/mrnHh438/Captura-de-tela-2025-11-05-111630.png)](https://postimg.cc/B8x6wdVK)
+<img width="659" height="291" alt="image" src="https://github.com/user-attachments/assets/5923ad33-827b-4179-b480-9921dba3317d" />
 
-Clicando no users.txt encontro a *flag*
+Clicando para ver a lista de usuário, nele contém o nome e a senha de login dos usuários, dentre a senha do natas3 é a nossa flag
 
-[![Captura-de-tela-2025-11-05-111727.png](https://i.postimg.cc/W3Ps5fsv/Captura-de-tela-2025-11-05-111727.png)](https://postimg.cc/XZQMJLZH)
+<img width="304" height="114" alt="image" src="https://github.com/user-attachments/assets/9fc6a198-0f11-4fe8-adc1-ba8868e40f8c" />
 
-**FLAG:** K30JrSRHzjxq3paUQuwozY4MNvmNFyhI
+### **FLAG:** K30JrSRHzjxq3paUQuwozY4MNvmNFyhI
 
 ## [natas3](http://natas3.natas.labs.overthewire.org)
 ###### Usuário: natas3
 ###### Senha: K30JrSRHzjxq3paUQuwozY4MNvmNFyhI
 
-O primeiro passo foi inspecionar o código da página, onde encontrei uma dica
+Inspecionando a página recebo a seguinte dica:
+<img width="1081" height="276" alt="image" src="https://github.com/user-attachments/assets/06fca5a1-0f68-4e3d-9ab2-5fc32195798d" />
 
-[![Captura-de-tela-2025-11-12-104016.png](https://i.postimg.cc/CK34VNXz/Captura-de-tela-2025-11-12-104016.png)](https://postimg.cc/f3vdcxwN)
+Ela quer dizer que nem mesmo o google poderá achar, ou seja, a página que procuramos não está indexada. Nos levando a pasta [robots.txt](https://www.cloudflare.com/pt-br/learning/bots/what-is-robots-txt/)
 
-Essa dica me leva a pasta [robots.txt](https://www.cloudflare.com/pt-br/learning/bots/what-is-robots-txt/)
+<img width="650" height="126" alt="image" src="https://github.com/user-attachments/assets/71014ea0-67e1-4b26-800d-cc52e9051f4d" />
 
-<img width="562" height="115" alt="image" src="https://github.com/user-attachments/assets/ff5a4983-1987-48aa-9d14-60abe90114d5" />
+Nessa página se encontra um diretório não indexado chamado "/s3cr3t/".
 
-Ao analisar a página, identifico um diretório oculto, /s3cr3t, que não está indexado no Google. Em seguida, adiciono esse caminho ao final da URL para acessar seu conteúdo
+Acessando esse caminho nos deparamos com outro diretório com arquivos, só que agora contento apenas o "users.txt"
 
-<img width="633" height="287" alt="image" src="https://github.com/user-attachments/assets/0c7ba5a0-0ed0-43ca-b828-0ce49e3c6286" />
+<img width="645" height="323" alt="Captura de tela 2026-07-01 165038" src="https://github.com/user-attachments/assets/4a59ed77-411b-4f6d-9531-57d13c6251a8" />
 
-Aqui encontro um link para usuários e, por fim, encontro a *flag*
+Acessando esse arquivos conseguimos a flag
 
-<img width="609" height="100" alt="image" src="https://github.com/user-attachments/assets/de5da0fc-2714-4ee0-b333-b8b51bc40264" />
+<img width="687" height="119" alt="image" src="https://github.com/user-attachments/assets/4c5e558a-e2a1-4b43-8af5-d1fb820de25a" />
 
-**FLAG:** JDrPnuZAKyl6MkiqQGFIddrqpvgOASth
+### **FLAG:** JDrPnuZAKyl6MkiqQGFIddrqpvgOASth
 
 ## [natas4](http://natas4.natas.labs.overthewire.org)
 ###### Usuário: natas4
