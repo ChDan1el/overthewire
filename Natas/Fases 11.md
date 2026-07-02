@@ -143,6 +143,34 @@ print(resultado.decode())
 | Cookie forjado | Com a chave em mãos, qualquer payload pode ser cifrado e aceito |
 
 ---
+```php
+<?php
+$biscoito = "EGAgHwQ1IxYYMSQYGSZxTUksPFVHYDEQCC0/GBlgaVVIJDURDSQ1VRY=";
+
+function xor_encrypt($in) {
+    $key = 'kBSw';
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i<strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+
+$chave = xor_encrypt(base64_decode($biscoito));
+
+echo "Chave:" , $chave;
+
+$visual = array( "showpassword"=>"yes", "bgcolor"=>"#ffffff");
+
+$hackeado = base64_encode(xor_encrypt(json_encode($visual)));
+
+echo "Cookie: ",$hackeado;
+?>
+```
 
 ## Conclusão
 
